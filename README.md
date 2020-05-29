@@ -1,2 +1,2 @@
 # dotfiles
-Files used to configure vim, popos etc..
+Files used to configure vim, popos, gtk bar etc
