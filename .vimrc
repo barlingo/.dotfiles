@@ -1,5 +1,7 @@
 syntax on
 
+set path=$PWD/**
+set encoding=UTF-8
 set guicursor=
 set noshowmatch
 set relativenumber
@@ -20,7 +22,8 @@ set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
-
+set t_u7=
+set t_RV=
 " Give more space for displaying messages.
 set cmdheight=4
 
@@ -48,21 +51,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
 " Color Schemes
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-" To be determined
-Plug '/home/mpaulson/personal/vim-be-good'
 "My Plugs
 Plug 'https://github.com/tpope/vim-obsession'
 Plug 'https://github.com/jmcantrell/vim-virtualenv'
 Plug 'vim-syntastic/syntastic'
-Plug 'Yggdroot/indentLine'
-Plug 'preservim/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 " Python Specific Plugins
 Plug 'nvie/vim-flake8'
+Plug 'preservim/nerdtree'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " --- vim go (polyglot) settings.
@@ -153,11 +154,11 @@ nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <leader>t :term <CR>
 
 " ESC keyboard remap
-au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 " FILES navigation
-nnoremap <leader>u :UndotreeShow <bar> :vertical resize 30<CR>
+nnoremap <leader>u :UndotreeShow <CR>
 nnoremap <leader>pv <bar> :NERDTreeToggle <bar> :vertical resize 30<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <C-p> :GFiles<CR>
@@ -172,13 +173,10 @@ autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
 " ColorScheme
 nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
 
-" TO BE DETERMINED
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
+" Visual mode move lines and delete
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap X "_d
-inoremap <C-c> <esc>
 
 " Disable Background Color Erase (BCE) so that color schemes
 " render properly when inside 256-color tmux and GNU screen.
@@ -186,27 +184,21 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Python specific indentation
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
-let g:indentLine_char = '▏'
+let g:indentLine_first_char = '┊'
 let g:indentLine_enabled = 1
+let g:indentLine_setColors = 1
+let g:indentLine_color_term = 8
 let g:indentLine_faster = 1
 let g:indentLine_setConceal = 0
-
+let g:indentLine_leadingSpaceEnabled = 1
+"   Indenadas
+"       Test
+"
 let python_highlight_all=1
-
-
 
 " Command calls on write
 autocmd BufWritePre * :call TrimWhitespace()
 
 " Python specific
 autocmd BufWritePost *.py call Flake8()
+
