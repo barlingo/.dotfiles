@@ -64,7 +64,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'nvie/vim-flake8'
 Plug 'preservim/nerdtree'
 Plug 'Yggdroot/indentLine'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'chiel92/vim-autoformat'
+Plug 'brooth/far.vim'
 call plug#end()
+
 
 " --- vim go (polyglot) settings.
 let g:go_highlight_build_constraints = 1
@@ -89,7 +93,6 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 " Terminal View
-set termwinsize=6x0
 set splitbelow
 
 let loaded_matchparen = 1
@@ -135,7 +138,9 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Page up and Down navigation
 nnoremap <C-k> <C-B>
 nnoremap <C-j> <C-F>
-
+" New Line inserts in normal mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 " VIM TABs navigation
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
@@ -151,7 +156,9 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 " Create terminal
-nnoremap <leader>t :term <CR>
+nnoremap <leader>t :10sp <bar> :terminal <CR>
+" Close terminal with double escape
+tnoremap <silent> <C-[><C-[> <C-\><C-n>
 
 " ESC keyboard remap
 " au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
@@ -166,8 +173,8 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 
 " PYTHON specific
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:ter python2 "%"<CR>
-autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:ter python3 "%"<CR>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:10sp <bar>:ter python2 "%"<CR>
+autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:10sp <bar>:ter python3 "%"<CR>
 autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
 
 " ColorScheme
@@ -184,6 +191,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+
 let g:indentLine_first_char = '┊'
 let g:indentLine_enabled = 1
 let g:indentLine_setColors = 1
@@ -195,10 +203,12 @@ let g:indentLine_leadingSpaceEnabled = 1
 "       Test
 "
 let python_highlight_all=1
-
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 " Command calls on write
 autocmd BufWritePre * :call TrimWhitespace()
 
 " Python specific
 autocmd BufWritePost *.py call Flake8()
-
+au BufWrite * :Autoformat
