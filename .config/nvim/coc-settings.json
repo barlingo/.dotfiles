@@ -1,1 +1,27 @@
-/home/dbarranco/.config/nvim/coc-settings.json
+{
+    "diagnostic.errorSign": "✖",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.infoSign": "ℹ",
+    "diagnostic.hintSign": "➤",
+    "suggest.noselect": false,
+    "suggest.echodocSupport": true,
+    "codeLens.enable": true,
+    "signature.enable": true,
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.importModuleSpecifier": "auto",
+    "tsserver.implicitProjectConfig.experimentalDecorators": true,
+    "html.suggest.angular1": false,
+    "html.suggest.ionic": false,
+    "html.suggest.html5": true,
+    "python.venvFolders": ["envs",".pyenv",".direnv", "~/.virtualenv", "~/.cache/pypoetry/virtualenvs", "venv", ".venv"],
+    "python.workspaceSymbols.exclusionPatterns": [],
+    "python.jediEnabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+    "python.formatting.blackPath":"~/.local/bin/black",
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.path": "/home/calev/.local/bin/isort",
+    "python.linting.pylintPath": "/usr/local/bin/pylint"
+}
