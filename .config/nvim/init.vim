@@ -1,5 +1,6 @@
 syntax on
-
+" Maximize NVIM on open
+autocmd VimEnter * set lines=999 columns=999
 let g:python3_host_prog='~/.virtualenv/neovim3/bin/python3'
 let g:python_host_prog='~/.virtualenv/neovim2/bin/python'
 set complete+=kspell
@@ -49,20 +50,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
-" Color Schemes
 Plug 'gruvbox-community/gruvbox'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-"My Plugs
-Plug 'https://github.com/tpope/vim-obsession'
-Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-syntastic/syntastic'
-Plug 'terryma/vim-multiple-cursors'
-" Python Specific Plugins
+Plug 'mhinz/vim-startify'
 Plug 'nvie/vim-flake8'
 Plug 'preservim/nerdtree'
-Plug 'Yggdroot/indentLine'
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'chiel92/vim-autoformat'
 Plug 'brooth/far.vim'
@@ -70,6 +65,7 @@ Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 
+let g:startify_session_dir = '~/.vim/sessions'
 " --- vim go (polyglot) settings.
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
@@ -134,17 +130,17 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-"--- indentLine ---
-let g:indentLine_char               = "⎸"
-let g:indentLine_faster             = 1
-" let g:indentLine_leadingSpaceEnabled = 1
+
+" indentLine
+let g:indentLine_char = "⎸"
+let g:indentLine_faster = 1
+let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_leadingSpaceChar   = '·'
-let g:indentLine_setConceal = 0
+let g:indentLine_setConceal = 1
 let g:indentLine_enabled = 1
 
 let python_highlight_all=1
 let g:virtualenv_directory = '~/.virtualenv/'
-let g:virtualenv_loaded = 1
 
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
@@ -182,7 +178,7 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 " Create terminal
-nnoremap <leader>t :sp <bar> :terminal <CR>
+nnoremap <leader>t :sp 12<bar> :terminal <CR>
 " Close terminal with double escape
 tnoremap <silent> <C-[><C-[> <C-\><C-n>
 
@@ -215,17 +211,16 @@ nmap <leader>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
+nnoremap <leader>cr :CocRestart <CR>
 
 
 " F# MAPPING
 map <F2> :setlocal spell! spelllang=en_us<CR>
 " PYTHON specific
 autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python2 "$(VIM_FILEPATH)" <CR> <Esc> <Esc>
-autocmd Filetype python nnoremap <buffer> <F6>  :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python3 "$(VIM_FILEPATH)" <CR> <Esc> <Esc>
-
-
+autocmd Filetype python nnoremap <buffer> <F4> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python2 "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python3 "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
+autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 venv/bin/python "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
 " Command calls on write
 autocmd BufWritePre * :call TrimWhitespace()
 au BufWrite * :Autoformat
