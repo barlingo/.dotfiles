@@ -1,12 +1,18 @@
 syntax on
 " Maximize NVIM on open
-autocmd VimEnter * set lines=999 columns=999
-let g:python3_host_prog='~/.virtualenv/neovim3/bin/python3'
-let g:python_host_prog='~/.virtualenv/neovim2/bin/python'
+" autocmd VimEnter * set lines=999 columns=999
+let g:python3_host_prog='~/.virtualenvs/neovim3/bin/python3'
+let g:python_host_prog='~/.virtualenvs/neovim2/bin/python'
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 set complete+=kspell
 set path=$PWD/**
 set encoding=UTF-8
 set guicursor=
+set guifont=Bitstream_Vera_Sans_Mono:h14
 set noshowmatch
 set relativenumber
 set nohlsearch
@@ -32,7 +38,7 @@ set t_RV=
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 " Give more space for displaying messages.
-set cmdheight=4
+set cmdheight=3
 " Having longer update time (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=50
@@ -41,6 +47,7 @@ set shortmess+=c
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
+Plug 'unblevable/quick-scope'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
@@ -57,11 +64,13 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
 Plug 'nvie/vim-flake8'
-Plug 'preservim/nerdtree'
-Plug 'ThePrimeagen/vim-be-good'
+Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'chiel92/vim-autoformat'
 Plug 'brooth/far.vim'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -83,8 +92,15 @@ let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 set background=dark
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+autocmd ColorScheme gruvbox highlight QuickScopePrimary guifg='#cc241d' gui=underline ctermfg=81 cterm=underline
+autocmd ColorScheme gruvbox highlight QuickScopeSecondary guifg='#d79921' gui=underline ctermfg=155 cterm=underline
+let g:qs_max_chars=150
+
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -111,8 +127,10 @@ inoremap <silent><expr> <TAB>
             \ coc#refresh()
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+imap <silent><expr> <CR> pumvisible()
+                 \ ? "\<C-Y>"
+                 \ : "<Plug>delimitMateCR"
 inoremap <silent><expr> <C-space> coc#refresh()
-
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
@@ -120,9 +138,9 @@ fun! TrimWhitespace()
 endfun
 
 " Set terminal to only open with 12 rows
-augroup myterm | au!
-    au TermOpen * if &buftype ==# 'terminal' | resize 12 | endif
-augroup end
+" augroup myterm | au!
+"     au TermOpen * if &buftype ==# 'terminal' | resize 12 | endif
+" augroup end
 
 " Disable Background Color Erase (BCE) so that color schemes
 " render properly when inside 256-color tmux and GNU screen.
@@ -132,15 +150,15 @@ endif
 
 
 " indentLine
-let g:indentLine_char = "⎸"
+let g:indentLine_char = "▏"
 let g:indentLine_faster = 1
 let g:indentLine_leadingSpaceEnabled = 0
-let g:indentLine_leadingSpaceChar   = '·'
+let g:indentLine_leadingSpaceChar   = '•'
 let g:indentLine_setConceal = 1
 let g:indentLine_enabled = 1
 
 let python_highlight_all=1
-let g:virtualenv_directory = '~/.virtualenv/'
+let g:virtualenv_directory = '~/.virtualenvs/'
 
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
@@ -164,8 +182,6 @@ nnoremap <C-j> <C-F>
 " New Line inserts in normal mode
 nmap <CR> o<Esc>
 " VIM TABs navigation
-nnoremap <s-k> :tabprevious<CR>
-nnoremap <s-j> :tabnext<CR>
 
 " Navigate through VIM windows
 nnoremap <leader>h :wincmd h<CR>
@@ -178,7 +194,7 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 " Create terminal
-nnoremap <leader>t :sp 12<bar> :terminal <CR>
+nnoremap <leader>t :sp <bar> resize 12 <bar> terminal <CR>
 " Close terminal with double escape
 tnoremap <silent> <C-[><C-[> <C-\><C-n>
 
@@ -187,7 +203,7 @@ au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 " FILES navigation
 nnoremap <leader>u :UndotreeShow <CR>
-nnoremap <leader>pv <bar> :NERDTreeToggle <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <C-p> :GFiles<CR>
 " RipGrep search pattern on file
@@ -201,6 +217,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap X "_d
 
+" Save File
+nnoremap <C-S> :update<cr>
+
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
@@ -213,17 +232,30 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart <CR>
 
+let g:syntastic_python_checkers = ['pylint']
 
 " F# MAPPING
 map <F2> :setlocal spell! spelllang=en_us<CR>
 " PYTHON specific
 autocmd FileType python map <buffer> <F3> :call flake8#Flake8()<CR>
-autocmd Filetype python nnoremap <buffer> <F4> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python2 "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 python3 "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
-autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=10 venv/bin/python "$(VIM_FILEPATH)" <CR> <bar> <Esc> <Esc>
+autocmd Filetype python nnoremap <buffer> <F4> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=12 python2 "$(VIM_FILEPATH)" <CR>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:AsyncRun -mode=term -pos=bottom -rows=12 python3 "$(VIM_FILEPATH)" <CR>
+autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:AsyncRun -mode=term -pos=pbottom -rows=12 .env/bin/python3 "$(VIM_FILEPATH)" <CR>
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.']
+
 " Command calls on write
 autocmd BufWritePre * :call TrimWhitespace()
 au BufWrite * :Autoformat
 
+set noshowmode
+set showtabline=2
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 " Python specific
 " autocmd BufWritePost *.py call Flake8()
