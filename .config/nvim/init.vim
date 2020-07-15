@@ -111,11 +111,6 @@ set splitbelow
 let loaded_matchparen = 1
 let mapleader = " "
 
-let g:netrw_browse_split = 2
-let g:vrfr_rg = 'true'
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-
 function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
