@@ -7,3 +7,5 @@ touch ~/.config/nvim/init.vim
 ln -s ~/Git/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 touch ~/.config/nvim/coc-settings.json
 ln -s ~/Git/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+
+cp whatsapp-desktop-webapp.desktop ~/.local/share/applications/
