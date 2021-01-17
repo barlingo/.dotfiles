@@ -8,4 +8,5 @@ ln -s ~/Git/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 touch ~/.config/nvim/coc-settings.json
 ln -s ~/Git/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 
-cp whatsapp-desktop-webapp.desktop ~/.local/share/applications/
+cp --parents .local/share/applications/whatsapp-desktop-webapp.desktop ~
+cp --parents .local/share/icons/hicolor/128x128/apps/whatsapp_web.png ~
