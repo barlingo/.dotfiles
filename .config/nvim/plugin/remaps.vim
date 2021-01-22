@@ -42,15 +42,6 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Close terminal with double escape
 tnoremap <silent> <C-[><C-[> <C-\><C-n>
 
-
-" Not sure remapsrempas
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
-
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 " F# MAPPING
 map <F2> :setlocal spell! spelllang=en_us<CR>
 
