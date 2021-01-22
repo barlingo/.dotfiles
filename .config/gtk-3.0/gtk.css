@@ -24,8 +24,8 @@ headerbar separator {
 }
 
 .default-decoration .titlebutton {
-    min-height: 0px; /* tweak these two props to reduce button size */
-    min-width: 0px;
+    min-height: 4px; /* tweak these two props to reduce button size */
+    min-width: 4px;
 }
 
 window.ssd headerbar.titlebar {
