@@ -11,11 +11,15 @@ nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.sho
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
-"
+lua require('lspconfig').clangd.setup{ on_attach=require'completion'.on_attach }
+"" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Trigger configuration. You need to change this to something other than <tab>
 " if you use one of the following:
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
-let g:UltiSnipsExpandTrigger="<c-y>"
+let g:completion_enable_snippet = 'UltiSnips'
+let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
