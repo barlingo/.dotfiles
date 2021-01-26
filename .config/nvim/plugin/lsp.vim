@@ -20,6 +20,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
 let g:completion_enable_snippet = 'UltiSnips'
-let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsExpandTrigger="\<S-CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
