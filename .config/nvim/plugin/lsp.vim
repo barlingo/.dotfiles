@@ -10,7 +10,7 @@ nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
 nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
+lua require('lspconfig').pyls.setup{on_attach=require'completion'.on_attach}
 lua require('lspconfig').clangd.setup{ on_attach=require'completion'.on_attach }
 "" Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
