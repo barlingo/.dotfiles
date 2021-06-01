@@ -14,9 +14,14 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 " lsp plugins
 Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-lua/completion-nvim'
+
+Plug 'glepnir/lspsaga.nvim'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
+Plug 'kabouzeid/nvim-lspinstall'
 Plug 'honza/vim-snippets'
 
 Plug 'SirVer/ultisnips'
@@ -38,6 +43,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jremmen/vim-ripgrep'
 Plug 'sheerun/vim-polyglot'
+Plug 'tribela/vim-transparent'
 call plug#end()
 
 if executable('rg')
