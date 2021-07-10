@@ -19,7 +19,6 @@ O.smart_case = true
 O.relative_number = true
 O.colorcolumn = "80"
 O.cmdheight = 3
-O.cmdheight = "a"
 O.tab_stop = 4
 O.shift_width = 4
 
@@ -62,10 +61,9 @@ O.lang.tsserver.linter = nil
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
 
 -- Additional Leader bindings for WhichKey
--- O.user_which_key = {
---   A = {
---     name = "+Custom Leader Keys",
---     a = { "<cmd>echo 'first custom command'<cr>", "Description for a" },
---     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
---   },
--- }
+O.user_which_key = {
+  t = {
+    name = "+terminal",
+    e = { "<cmd>terminal<cr>", "Execute terminal" },
+  },
+}
