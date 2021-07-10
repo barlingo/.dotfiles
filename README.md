@@ -1,9 +1,11 @@
 # dotfiles
 Files used to configure vim, popos, gtk bar etc
-__Linking Commands__
+Just need to do stow {app} to install in proper folder.
 ```
-ln -s ~/Git/dotfiles/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css
-ln -s ~/Git/dotfiles/.config/nvim/lv-config.lua ~/.config/nvim/lv-config.lua
+
+stow nvim
+stow whatsapp
+stow small-header 
 
 ```
 
