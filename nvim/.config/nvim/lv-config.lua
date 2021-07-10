@@ -31,7 +31,7 @@ O.plugin.colorizer.active = false
 O.plugin.ts_playground.active = false
 O.plugin.indent_line.active = true
 O.plugin.zen.active = false
-O.plugin.floatterm.active = true
+O.plugin.floatterm.active = false
 
 -- O.plugin.lazygit.active = true
 
