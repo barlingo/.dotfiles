@@ -5,7 +5,7 @@ Name=Neovim
 GenericName=Neovim
 Icon=neovim
 Comment=Neovim Desktop App
-Exec=kitty --class nvim --detach --title Neovim nvim %F
+Exec=kitty --class nvim --detach --title Neovim -o background_opacity=1 -1 nvim %F
 NoDisplay=false
 Categories=X-GNOME-Other;
 StartupNotify=true

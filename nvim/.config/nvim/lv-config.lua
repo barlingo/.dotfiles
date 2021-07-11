@@ -21,7 +21,7 @@ O.colorcolumn = "80"
 O.cmdheight = 2
 O.tab_stop = 4
 O.shift_width = 4
-O.transparent_window = 0.95
+O.transparent_window = 1
 O.nvim_tree_disable_netrw = 1
 
 

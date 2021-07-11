@@ -7,7 +7,6 @@ done
 # Update to kitty terminal
 update-desktop-database ~/.local/share/applications
 sudo update-alternatives --config x-terminal-emulator
-chmod +x ~/.dotfiles/nvim-app/.local/bin/nvim-wrapper.py
 # Spacegray for gnome terminal
 # profile_key=$(gsettings get org.gnome.Terminal.ProfilesList default | sed -e "s/'//g" | tr -d "\n")
 # gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ visible-name "'Spacegray'"
