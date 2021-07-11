@@ -9,7 +9,8 @@ an executable
 -- general
 O.format_on_save = true
 O.auto_complete = true
-O.colorscheme = "spacegray" O.auto_close_tree = 0
+O.colorscheme = "spacegray"
+O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 100
 O.leader_key = " "
@@ -21,6 +22,7 @@ O.cmdheight = 2
 O.tab_stop = 4
 O.shift_width = 4
 O.transparent_window = 0.95
+O.nvim_tree_disable_netrw = 1
 
 
 
