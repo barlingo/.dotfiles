@@ -58,6 +58,13 @@ bindkey "^j" down-line-or-beginning-search # Down
 bindkey -r "^u"
 bindkey -r "^d"
 
+# hide gnome terminal
+if [ "$TERM" = "xterm-256color" ]; then
+  xprop \
+    -id $(xdotool getactivewindow) \
+    -f _MOTIF_WM_HINTS 32c \
+    -set _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"
+fi
 # FZF 
 # TODO update for mac
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh

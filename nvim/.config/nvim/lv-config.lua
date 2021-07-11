@@ -18,9 +18,10 @@ O.ignore_case = true
 O.smart_case = true
 O.relative_number = true
 O.colorcolumn = "80"
-O.cmdheight = 3
+O.cmdheight = 2
 O.tab_stop = 4
 O.shift_width = 4
+O.transparent_window = 0.95
 
 
 
