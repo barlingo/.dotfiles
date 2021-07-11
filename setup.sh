@@ -1,8 +1,8 @@
-yourfilenames=`echo */`
-for eachfile in $yourfilenames
+files=`echo */`
+for file in $files
 do
-   stow -D $eachfile
-   stow $eachfile
+   stow -D $file
+   stow $file
 done
 
 # Spacegray for gnome terminal
