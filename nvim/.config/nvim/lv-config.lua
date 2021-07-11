@@ -32,11 +32,13 @@ O.plugin.ts_playground.active = false
 O.plugin.indent_line.active = true
 O.plugin.zen.active = false
 O.plugin.floatterm.active = false
+O.plugin.telescope_project.active = true
+O.plugin.telescope_fzy.active = true
 
 -- O.plugin.lazygit.active = true
 
 -- dashboard
--- O.dashboard.custom_header = {""}
+-- O.dashboard.custom_header = {"hi"}
 -- O.dashboard.footer = {""}
 
 -- if you don't want all the parsers change this to a table of the ones you want
