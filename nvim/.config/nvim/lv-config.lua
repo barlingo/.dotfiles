@@ -33,9 +33,10 @@ O.plugin.colorizer.active = false
 O.plugin.ts_playground.active = false
 O.plugin.indent_line.active = true
 O.plugin.zen.active = false
-O.plugin.floatterm.active = false
+O.plugin.floatterm.active = true
 O.plugin.telescope_project.active = true
 O.plugin.telescope_fzy.active = true
+-- O.plugin.barbar.active = false
 -- O.plugin.lazygit.active = true
 
 -- dashboard
@@ -74,6 +75,6 @@ O.user_autocommands= {{ "BufWinEnter", "*", "set guifont=FiraCode\\ Nerd\\ Font\
 O.user_which_key = {
   t = {
     name = "+terminal",
-    e = { "<cmd>terminal<cr>", "Execute terminal" },
+    e = { "<cmd>:FloatermNew --wintype=popup --height=6<cr>", "terminal" },
   },
 }
