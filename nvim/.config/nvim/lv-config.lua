@@ -36,12 +36,11 @@ O.plugin.zen.active = false
 O.plugin.floatterm.active = false
 O.plugin.telescope_project.active = true
 O.plugin.telescope_fzy.active = true
-
 -- O.plugin.lazygit.active = true
 
 -- dashboard
 -- O.dashboard.custom_header = {"hi"}
--- O.dashboard.footer = {""}
+-- O.dashboard.footer = {"hey"}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = {}

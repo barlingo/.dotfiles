@@ -29,7 +29,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-xrdb ~/.Xresources
+# xrdb ~/.Xresources
 
 # random photo every login
 # feh --bg-fill --randomize ~/Pictures/wallpapers/* &
