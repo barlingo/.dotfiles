@@ -9,8 +9,7 @@ an executable
 -- general
 O.format_on_save = true
 O.auto_complete = true
-O.colorscheme = "spacegray"
-O.auto_close_tree = 0
+O.colorscheme = "spacegray" O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 100
 O.leader_key = " "
