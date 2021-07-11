@@ -29,7 +29,7 @@ O.nvim_tree_disable_netrw = 1
 -- TODO User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 O.plugin.dashboard.active = true
-O.plugin.colorizer.active = false
+O.plugin.colorizer.active = true
 O.plugin.ts_playground.active = false
 O.plugin.indent_line.active = true
 O.plugin.zen.active = false
