@@ -35,7 +35,7 @@ xrdb ~/.Xresources
 # feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="st"
+# export TERMINAL="st"
 export BROWSER="brave"
 # XDG Paths
 export XDG_CONFIG_HOME=$HOME/.config
