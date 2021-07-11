@@ -5,6 +5,7 @@ do
    stow $file
 done
 # Update to kitty terminal
+update-desktop-database ~/.local/share/applications
 sudo update-alternatives --config x-terminal-emulator
 chmod +x ~/.dotfiles/nvim-app/.local/bin/nvim-wrapper.py
 # Spacegray for gnome terminal
