@@ -71,10 +71,12 @@ O.lang.tsserver.linter = nil
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
 
 -- Additional Leader bindings for WhichKey
-O.user_autocommands= {{ "BufWinEnter", "*", "set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h13"}}
+-- O.user_autocommands= {{ "BufWinEnter", "*", "set guifont=FiraCode\\ Nerd\\ Font\\ Mono:h13"}}
 O.user_which_key = {
   t = {
     name = "+terminal",
-    e = { "<cmd>:FloatermNew --wintype=popup --height=6<cr>", "terminal" },
+    t = {"<cmd>lua require('FTerm').toggle()<cr>","toggle"},
   },
 }
+
+
