@@ -17,7 +17,7 @@ O.timeoutlen = 100
 O.default_options.relativenumber = true
 O.default_options.colorcolumn = "80"
 O.default_options.tabstop = 4
-O.colorscheme = "darkplus"
+O.colorscheme = "spacegray"
 O.default_options.shiftwidth = 4
 
 -- TODO: User Config for predefined plugins
@@ -30,7 +30,7 @@ O.plugin.zen.active = false
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = {}
 O.treesitter.ignore_install = { "haskell" }
-O.treesitter.highlight.enabled = true
+O.treesitter.highlight.enabled = false
 
 -- python
 O.lang.python.linter = "flake8"
