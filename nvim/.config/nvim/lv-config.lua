@@ -18,6 +18,7 @@ O.default_options.relativenumber = true
 O.default_options.colorcolumn = "80"
 O.default_options.tabstop = 4
 O.colorscheme = "spacegray"
+O.transparent_window = false
 O.default_options.shiftwidth = 4
 
 -- TODO: User Config for predefined plugins
