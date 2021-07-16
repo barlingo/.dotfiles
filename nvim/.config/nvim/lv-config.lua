@@ -14,18 +14,11 @@ O.auto_complete = true
 O.auto_close_tree = 0
 O.wrap = false
 O.timeoutlen = 100
-O.leader_key = " "
-O.ignore_case = true
-O.smart_case = true
-O.relative_number = true
-O.colorcolumn = "80"
-O.cmdheight = 2
-O.tab_stop = 4
-O.shift_width = 4
-O.transparent_window = 1
-O.scrolloff = 8
-O.nvim_tree_disable_netrw = 1
-
+O.default_options.relativenumber = true
+O.default_options.colorcolumn = "80"
+O.default_options.tabstop = 4
+O.colorscheme = "spacegray"
+O.default_options.shiftwidth = 4
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -37,7 +30,7 @@ O.plugin.zen.active = false
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = {}
 O.treesitter.ignore_install = { "haskell" }
-O.treesitter.highlight.enabled = true
+O.treesitter.highlight.enabled = false
 
 -- python
 O.lang.python.linter = "flake8"
