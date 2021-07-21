@@ -42,7 +42,7 @@ O.plugin.terminal.active = true
 O.plugin.zen.active = false
 O.plugin.zen.window.height = 0.90
 O.plugin.nvimtree.side = "left"
-O.plugin.nvimtree.show_icons.git = false
+O.plugin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "maintained"
@@ -124,7 +124,7 @@ O.user_plugins = {
 
     vim.g.indent_blankline_show_trailing_blankline_indent = false
     vim.g.indent_blankline_show_first_indent_level = true
-    vim.cmd("hi IndentBlanklineChar guifg=#383245" )
+    vim.cmd("hi IndentBlanklineChar guifg=#404040" )
   end,
   event = "BufRead",
   },
