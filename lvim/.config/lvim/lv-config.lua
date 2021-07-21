@@ -8,9 +8,7 @@ an executable ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-
-O.format_on_save = true
-O.lint_on_save = true
+O.format_on_save = true O.lint_on_save = true
 O.completion.autocomplete = true
 O.colorscheme = "spacegray"
 O.default_options.wrap = true
@@ -113,6 +111,7 @@ O.lang.latex.latexindent.modify_line_breaks = false
 
 -- Additional Plugins
 O.user_plugins = {
+  {"lunarvim/colorschemes"},
   {
   "lukas-reineke/indent-blankline.nvim",
   config = function()
@@ -130,12 +129,26 @@ O.user_plugins = {
   },
   {
   "norcalli/nvim-colorizer.lua",
-  config = function()
-  vim.cmd("ColorizerReloadAllBuffers")
+    config = function()
+    require("colorizer").setup({ "*" }, {
+      RGB = true, -- #RGB hex codes
+      RRGGBB = true, -- #RRGGBB hex codes
+      RRGGBBAA = true, -- #RRGGBBAA hex codes
+      rgb_fn = true, -- CSS rgb() and rgba() functions
+      hsl_fn = true, -- CSS hsl() and hsla() functions
+      css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+      css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  })
   end,
-  event = "BufRead",
   },
-  --  {"folke/tokyonight.nvim"},
+  {
+    "unblevable/quick-scope",
+    config = function()
+      vim.cmd [[
+      let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+      ]]
+    end,
+  }, --  {"folke/tokyonight.nvim"},
   -- {
   -- "ray-x/lsp_signature.nvim",
   --  config = function()
