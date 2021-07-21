@@ -34,7 +34,7 @@ fi
 # random photo every login
 # feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 # Environment variables set everywhere
-export EDITOR="nvim"
+export EDITOR="lvim"
 # export TERMINAL="st"
 export BROWSER="brave"
 # XDG Paths

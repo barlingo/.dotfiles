@@ -136,12 +136,12 @@ O.user_plugins = {
   event = "BufRead",
   },
   --  {"folke/tokyonight.nvim"},
-  {
-  "ray-x/lsp_signature.nvim",
-  config = function()
-  require"lsp_signature".on_attach() end,
-  event = "InsertEnter"
-  },
+  -- {
+  -- "ray-x/lsp_signature.nvim",
+  --  config = function()
+  -- require"lsp_signature".on_attach() end,
+  -- event = "InsertEnter"
+  -- },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
