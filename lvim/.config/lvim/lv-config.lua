@@ -8,10 +8,11 @@ an executable ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-O.format_on_save = true O.lint_on_save = true
+O.format_on_save = true
+O.lint_on_save = true
 O.completion.autocomplete = true
 O.colorscheme = "spacegray"
-O.default_options.wrap = true
+O.default_options.wrap = false
 O.default_options.timeoutlen = 100
 -- keymappings
 O.keys.leader_key = "space"
@@ -109,9 +110,11 @@ O.lang.latex.latexindent.modify_line_breaks = false
 -- O.lang.latex.auto_save = false
 -- O.lang.latex.ignore_errors = { }
 
+-- O.plugin.telescope.defaults.prompt_prefix = "> "
 -- Additional Plugins
 O.user_plugins = {
-  {"lunarvim/colorschemes"},
+  {"lunarvim/colorschemes",
+  event = "VimEnter", },
   {
   "lukas-reineke/indent-blankline.nvim",
   config = function()
@@ -129,7 +132,7 @@ O.user_plugins = {
   },
   {
   "norcalli/nvim-colorizer.lua",
-    config = function()
+  config = function()
     require("colorizer").setup({ "*" }, {
       RGB = true, -- #RGB hex codes
       RRGGBB = true, -- #RRGGBB hex codes
@@ -138,8 +141,9 @@ O.user_plugins = {
       hsl_fn = true, -- CSS hsl() and hsla() functions
       css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
       css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-  })
-  end,
+    })
+    end,
+  event = "VimEnter",
   },
   {
     "unblevable/quick-scope",
@@ -147,14 +151,8 @@ O.user_plugins = {
       vim.cmd [[
       let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
       ]]
-    end,
-  }, --  {"folke/tokyonight.nvim"},
-  -- {
-  -- "ray-x/lsp_signature.nvim",
-  --  config = function()
-  -- require"lsp_signature".on_attach() end,
-  -- event = "InsertEnter"
-  -- },
+      end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
