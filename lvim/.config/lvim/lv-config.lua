@@ -14,6 +14,7 @@ O.completion.autocomplete = true
 O.colorscheme = "spacegray"
 O.default_options.wrap = false
 O.default_options.timeoutlen = 100
+O.default_options.shiftwidth = 4
 -- keymappings
 O.keys.leader_key = "space"
 -- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
