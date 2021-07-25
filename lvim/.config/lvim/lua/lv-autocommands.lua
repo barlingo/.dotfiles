@@ -1,0 +1,11 @@
+
+-- Autocommands (https://neovim.io/doc/user/autocmd.html)
+-- lvim.autocommands = {{ "CursorHoldI", "*", "lua vim.lsp.diagnostic.show_line_diagnostics()"},}
+-- lvim.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
+-- Additional Leader bindings for WhichKey
+-- lvim.user_which_key = {
+--   A = {
+--     name = "+Custom Leader Keys",
+--     a = { "<cmd>echo 'first custom command'<cr>", "Description for a" },
+--     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
+--   },
