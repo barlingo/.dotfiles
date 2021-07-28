@@ -20,3 +20,10 @@
 
 -- Tlvim.O: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+
+-- List of executable terminal commands:
+lvim.builtin.terminal.execs = {
+  {"lazygit", "gg", "LazyGit"},
+  {"gdb", "tg", "GNU Debugger"},
+  {"ssh", "ts", "SSH Connection"},
+}
