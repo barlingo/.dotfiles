@@ -30,9 +30,3 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.timeoutlen = 100
 vim.opt.colorcolumn = "80"
--- vim.opt.tabstop = 4
--- 300.opt.colorcolumn = "80"
-
-
-
-
