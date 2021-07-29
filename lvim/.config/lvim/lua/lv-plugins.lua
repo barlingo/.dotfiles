@@ -7,30 +7,30 @@ lvim.plugins = {
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		-- opt = true,
-		event = "InsertEnter",
 		disable = false,
+		cond = "InsertMode",
 		-- cmd = "IndentBlanklineEnable",
 		config = function()
-			require("lv-plugins.blankline").setup()
+			require("config.blankline").setup()
 		end,
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
-		event = "InsertEnter",
 		disable = false,
+		cond = "InsertMode",
 		opt = true,
 		cmd = "ColorizerToggle",
 		config = function()
-			require("lv-plugins.colorizer").setup()
+			require("config.colorizer").setup()
 		end,
 	},
 	{
 		"unblevable/quick-scope",
 		-- event = "InsertEnter",
 		disable = false,
+		cond = "InsertMode",
 		config = function()
-			require("lv-plugins.quickscope").setup()
+			require("config.quickscope").setup()
 		end,
 	},
 	{
@@ -39,15 +39,24 @@ lvim.plugins = {
 		requires = "kyazdani42/nvim-web-devicons",
 		cmd = "Trouble",
 		config = function()
-			require("lv-plugins.trouble").setup()
+			require("config.trouble").setup()
 		end,
 	},
 	{
 		"ray-x/lsp_signature.nvim",
-		event = "InsertEnter",
 		disable = true,
+		event = "InsertEnter",
 		config = function()
 			require("lsp_signature").on_attach()
 		end,
+	},
+	{
+		"hkupty/iron.nvim",
+		disable = true,
+		setup = [[vim.g.iron_map_defaults = 0]],
+		config = function()
+			require("config.iron").setup()
+		end,
+		cmd = { "IronRepl", "IronSend", "IronReplHere" },
 	},
 }
