@@ -5,8 +5,7 @@ lvim.lang.lua.formatter.exe = "stylua"
 -- python
 lvim.lang.python.autoformat = true
 lvim.lang.python.formatter.exe = "black"
-lvim.lang.python.linters = ""
--- lvim.lang.python.linters = { "pylint" }
+lvim.lang.python.linters = { "pylint" }
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers

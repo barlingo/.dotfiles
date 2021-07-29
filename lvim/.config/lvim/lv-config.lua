@@ -1,7 +1,7 @@
 -- General Settings
 vim.opt.relativenumber = true
 vim.opt.wrap = false
-vim.opt.timeoutlen = 100
+vim.opt.timeoutlen = 200
 vim.opt.colorcolumn = "80"
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -15,7 +15,7 @@ lvim.colorscheme = "spacegray"
 
 -- On save autocmd
 lvim.format_on_save = true
-lvim.lint_on_save = false
+lvim.lint_on_save = true
 
 -- LSP Diagnostics
 lvim.lsp.diagnostics.virtual_text = false
