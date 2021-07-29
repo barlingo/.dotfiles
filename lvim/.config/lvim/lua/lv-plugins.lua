@@ -8,8 +8,8 @@ lvim.plugins = {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		disable = false,
+		event = "InsertEnter",
 		cond = "InsertMode",
-		-- cmd = "IndentBlanklineEnable",
 		config = function()
 			require("config.blankline").setup()
 		end,
@@ -17,6 +17,7 @@ lvim.plugins = {
 	{
 		"norcalli/nvim-colorizer.lua",
 		disable = false,
+		event = "InsertEnter",
 		cond = "InsertMode",
 		opt = true,
 		cmd = "ColorizerToggle",
@@ -26,9 +27,7 @@ lvim.plugins = {
 	},
 	{
 		"unblevable/quick-scope",
-		-- event = "InsertEnter",
 		disable = false,
-		cond = "InsertMode",
 		config = function()
 			require("config.quickscope").setup()
 		end,
