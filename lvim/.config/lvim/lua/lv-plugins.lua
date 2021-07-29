@@ -1,6 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
-	-- {"lunarvim/colorschemes",
+	{ "lunarvim/colorschemes" },
 	-- event = "VimEnter", },
 	{
 		"lukas-reineke/indent-blankline.nvim",
