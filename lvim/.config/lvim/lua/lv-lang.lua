@@ -13,8 +13,9 @@ lvim.lang.lua.formatter.exe = "stylua"
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 -- python
+lvim.lang.python.autoformat = true
 lvim.lang.python.formatter.exe = "black"
--- lvim.lang.python.linters = { "flake8" }
+lvim.lang.python.linters = { "pylint" }
 -- To change default formatter from yapf to black
 -- lvim.lang.python.formatter.exe = "black"
 -- lvim.lang.python.formatter.args = {"-"}
