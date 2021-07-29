@@ -3,6 +3,12 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.timeoutlen = 100
 vim.opt.colorcolumn = "80"
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 5
+vim.opt.guifont = "Hack Regular Nerd Font Complete:h12"
 
 -- Colorscheme
 lvim.colorscheme = "spacegray"
