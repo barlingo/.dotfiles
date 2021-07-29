@@ -1,28 +1,33 @@
 -- Additional Plugins
 lvim.plugins = {
-	{ "lunarvim/colorschemes" },
+	{
+		"lunarvim/colorschemes",
+		opt = true,
+		disable = true,
+	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		-- event = "BufWinEnter",
-		-- cmd = "BufWinEnter",
+		-- opt = true,
+		event = "InsertEnter",
 		disable = false,
+		-- cmd = "IndentBlanklineEnable",
 		config = function()
 			require("lv-plugins.blankline").setup()
 		end,
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
-		-- event = "VimEnter",
-		-- cmd = "BufWinEnter",
+		event = "InsertEnter",
 		disable = false,
+		opt = true,
+		cmd = "ColorizerToggle",
 		config = function()
 			require("lv-plugins.colorizer").setup()
 		end,
 	},
 	{
 		"unblevable/quick-scope",
-		-- event = "BufWinEnter",
-		-- cmd = "BufWinEnter",
+		-- event = "InsertEnter",
 		disable = false,
 		config = function()
 			require("lv-plugins.quickscope").setup()
@@ -30,8 +35,6 @@ lvim.plugins = {
 	},
 	{
 		"folke/trouble.nvim",
-		-- event = "BufWinEnter",
-		-- cmd = "BufWinEnter",
 		disable = false,
 		requires = "kyazdani42/nvim-web-devicons",
 		cmd = "Trouble",
@@ -39,5 +42,11 @@ lvim.plugins = {
 			require("lv-plugins.trouble").setup()
 		end,
 	},
-	-- {"hkupty/iron.nvim"}
+	{
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			require("lsp_signature").on_attach()
+		end,
+		event = "InsertEnter",
+	},
 }
