@@ -1,6 +1,6 @@
 -- lua
 lvim.lang.lua.autoformat = true
-lvim.lang.lua.formatter = 'stylua'
+lvim.lang.lua.formatter.exe = "stylua"
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -14,8 +14,7 @@ lvim.lang.lua.formatter = 'stylua'
 -- end
 -- python
 lvim.lang.python.formatter.exe = "black"
-lvim.lang.python.formatter.args = {"-"}
-lvim.lang.python.linters= "flake8"
+-- lvim.lang.python.linters = { "flake8" }
 -- To change default formatter from yapf to black
 -- lvim.lang.python.formatter.exe = "black"
 -- lvim.lang.python.formatter.args = {"-"}

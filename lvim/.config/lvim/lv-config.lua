@@ -21,10 +21,10 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
-require "lv-plugins"
-require "lv-autocommands"
-require "lv-lang"
-require "lv-keymappings"
+require("lv-plugins")
+require("lv-autocommands")
+require("lv-lang")
+require("lv-keymappings")
 
 vim.opt.relativenumber = true
 vim.opt.wrap = false

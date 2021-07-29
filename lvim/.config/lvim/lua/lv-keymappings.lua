@@ -1,4 +1,3 @@
-
 -- keymappings
 -- lvim.leader_key = "Space"
 -- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
@@ -22,8 +21,9 @@
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 
 -- List of executable terminal commands:
+lvim.builtin.which_key.mappings["t"] = "Terminal"
 lvim.builtin.terminal.execs = {
-  {"lazygit", "gg", "LazyGit"},
-  {"gdb", "tg", "GNU Debugger"},
-  {"ssh", "ts", "SSH Connection"},
+	{ "lazygit", "gg", "LazyGit" },
+	{ "gdb", "tg", "GNU Debugger" },
+	{ "ssh", "ts", "SSH Connection" },
 }
