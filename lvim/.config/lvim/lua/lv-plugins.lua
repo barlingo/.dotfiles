@@ -36,7 +36,7 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		disable = false,
 		requires = "kyazdani42/nvim-web-devicons",
-		cmd = "Trouble",
+		cmd = { "Trouble", "TroubleToggle" },
 		config = function()
 			require("config.trouble").setup()
 		end,

@@ -1,4 +1,4 @@
--- General Settings
+--  General Settings
 vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.timeoutlen = 200
