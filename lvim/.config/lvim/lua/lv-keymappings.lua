@@ -10,6 +10,7 @@ lvim.builtin.terminal.execs = {
 
 lvim.builtin.which_key.mappings["t"] = {
 	name = "+Trouble",
+	t = { "<cmd>TroubleToggle<cr>", "Toggle" },
 	r = { "<cmd>Trouble lsp_references<cr>", "References" },
 	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
 	d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },

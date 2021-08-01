@@ -13,5 +13,5 @@ stow small-header
 ```
 Or setup everything with:
 ```
-bash setup.sh
+stow */
 ```

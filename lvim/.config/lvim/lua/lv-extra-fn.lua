@@ -1,6 +1,6 @@
 M = {}
 
-M.nvim_plugins = function(enabled)
+M.vim_plugins = function(enabled)
 	-- Neovim
 	if not enabled then
 		local disabled_built_ins = {

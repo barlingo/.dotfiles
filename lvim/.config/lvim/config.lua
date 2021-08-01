@@ -24,6 +24,7 @@ lvim.lsp.diagnostics.show_line_diagnostics = false
 -- Optional plugins LunarVim
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+lvim.builtin.dap.active = false
 
 -- Builtin plugns settings
 lvim.builtin.nvimtree.show_icons.git = 0
@@ -33,6 +34,5 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 require("lv-plugins")
 require("lv-autocommands")
-require("lv-lang")
 require("lv-keymappings")
-require("lv-extra-fn").nvim_plugins(false)
+require("lv-extra-fn").vim_plugins(false)
