@@ -15,6 +15,7 @@ vim.opt.guifont = "Hack Regular Nerd Font Complete:h12"
 require("lv-extra-fn").vim_plugins(false)
 -- Colorscheme
 lvim.colorscheme = "spacegray"
+lvim.transparent_window = false
 
 -- On save autocmd
 lvim.format_on_save = true
