@@ -1,11 +1,13 @@
 -- keymappings
 
 -- List of executable terminal commands:
-lvim.builtin.which_key.mappings["x"] = { "+Execute" }
+lvim.builtin.which_key.mappings["x"] = { name = "+Execute" }
 lvim.builtin.terminal.execs = {
 	{ "lazygit", "gg", "LazyGit" },
 	{ "gdb", "xg", "GNU Debugger" },
 	{ "ssh", "xs", "SSH Connection" },
+	{ "ranger", "xR", "Ranger" },
+	{ "nnn", "xn", "File Explorer nnn" },
 }
 
 lvim.builtin.which_key.mappings["t"] = {
