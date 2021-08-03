@@ -2,8 +2,8 @@
 lvim.plugins = {
 	{
 		"lunarvim/colorschemes",
-		opt = true,
 		disable = true,
+		opt = false,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
