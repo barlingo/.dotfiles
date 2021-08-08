@@ -20,3 +20,7 @@ lvim.builtin.which_key.mappings["t"] = {
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
 }
+
+lvim.keys.normal_mode["<esc>"] = "<cmd>nohlsearch<cr>"
+lvim.keys.normal_mode["Y"] = "y$"
+lvim.keys.visual_mode["p"] = [["_dP]]

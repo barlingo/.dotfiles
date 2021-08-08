@@ -8,10 +8,17 @@ lvim.plugins = {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		disable = false,
-		event = "InsertEnter",
-		cond = "InsertMode",
+		-- event = "InsertEnter",
+		-- cond = "InsertMode",
 		config = function()
 			require("config.blankline").setup()
+		end,
+	},
+	{
+		"karb94/neoscroll.nvim",
+		disable = false,
+		config = function()
+			require("config.neoscroll").config()
 		end,
 	},
 	{
