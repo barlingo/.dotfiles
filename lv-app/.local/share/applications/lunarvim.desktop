@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=LunarVim
 GenericName=Lunarvim
-Icon=neovim
+Icon=lunarvim
 Comment=LunarVim Desktop App
 Exec=kitty --class lvim --detach --title LunarVim -o background_opacity=1 -1 lvim %F
 NoDisplay=false
