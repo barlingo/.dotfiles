@@ -4,9 +4,9 @@ M.vim_plugins = function(enabled)
 	-- Neovim
 	if not enabled then
 		local disabled_built_ins = {
-			"netrw",
-			"netrwPlugin",
-			"netrwSettings",
+			-- "netrw",
+			-- "netrwPlugin",
+			-- "netrwSettings",
 			"netrwFileHandlers",
 			"gzip",
 			"zip",

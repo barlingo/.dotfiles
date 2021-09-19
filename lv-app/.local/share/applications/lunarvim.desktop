@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=LunarVim
 GenericName=Lunarvim
-Icon=lunarvim
+Icon=/home/diegob/.local/share/icons/hicolor/apps/lunarvim.png
 Comment=LunarVim Desktop App
 Exec=kitty --class lvim --detach --title LunarVim -o background_opacity=1 -1 lvim %F
 NoDisplay=false

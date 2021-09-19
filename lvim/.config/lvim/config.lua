@@ -12,7 +12,7 @@ vim.opt.foldlevel = 5
 vim.opt.guifont = "Hack Regular Nerd Font Complete:h12"
 
 -- Remove Vim plugins not used
-require("lv-extra-fn").vim_plugins(false)
+-- require("lv-extra-fn").vim_plugins(false)
 
 -- Theme
 -- lvim.colorscheme = "spacegray"
