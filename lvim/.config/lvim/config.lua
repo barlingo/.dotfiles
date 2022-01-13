@@ -9,7 +9,6 @@ vim.opt.cmdheight = 1
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 5
-vim.opt.guifont = "Hack Regular Nerd Font Complete:h12"
 
 -- Remove Vim plugins not used
 -- require("lv-extra-fn").vim_plugins(false)
