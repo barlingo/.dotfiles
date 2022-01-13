@@ -19,6 +19,7 @@ vim.opt.guifont = "Hack Regular Nerd Font Complete:h12"
 lvim.transparent_window = false
 
 -- On save autocmd
+lvim.leader = " "
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
@@ -33,7 +34,7 @@ lvim.builtin.dap.active = false
 lvim.builtin.notify.active = true
 
 -- Builtin plugns settings
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
