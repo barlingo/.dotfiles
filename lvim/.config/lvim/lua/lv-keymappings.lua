@@ -8,8 +8,8 @@ lvim.builtin.which_key.mappings["x"] = {
 }
 
 lvim.builtin.terminal.execs = {
-	{ "lazygit", "xg", "LazyGit" },
-	{ "gdb", "xG", "GNU Debugger" },
+	{ "lazygit", "<leader>xg", "LazyGit" },
+	{ "gdb", "<leader>xG", "GNU Debugger" },
 }
 
 lvim.builtin.which_key.mappings["t"] = {

@@ -1,11 +1,11 @@
 -- -- Autocommands
-lvim.autocommands.custom_groups = {
-	-- python
-	{
-		"Filetype",
-		"python",
-		"nnoremap <leader>xr <cmd>lua require('core.terminal')._exec_toggle('python "
-			.. vim.fn.expand("%")
-			.. ";read')<CR>",
-	},
-}
+-- lvim.autocommands.custom_groups = {
+-- 	-- python
+-- 	{
+-- 		"Filetype",
+-- 		"python",
+-- 		"nnoremap <leader>xr <cmd>lua require('toggleterm.terminal')Terminal:new (on "
+-- 			.. vim.fn.expand("%")
+-- 			.. ";read')<CR>",
+-- 	},
+-- }
