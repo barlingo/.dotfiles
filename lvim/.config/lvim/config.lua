@@ -30,6 +30,7 @@ lvim.lsp.diagnostics.show_line_diagnostics = false
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = false
+lvim.builtin.notify.active = true
 
 -- Builtin plugns settings
 lvim.builtin.nvimtree.show_icons.git = 0

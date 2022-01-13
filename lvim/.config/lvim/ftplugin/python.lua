@@ -1,13 +1,2 @@
-lvim.lang.python.formatters = {
-	{
-		exe = "black",
-		args = {},
-	},
-}
-
-lvim.lang.python.linters = {
-	{
-		exe = "flake8",
-		args = {},
-	},
-}
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({ { exe = "black", filetypes = { "python" } } })

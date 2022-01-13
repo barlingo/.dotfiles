@@ -36,7 +36,7 @@ lvim.plugins = {
 		"unblevable/quick-scope",
 		disable = false,
 		config = function()
-			require("config.quickscope").setup()
+			require "config.quickscope"
 		end,
 	},
 	{
