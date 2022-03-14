@@ -44,3 +44,4 @@ export XDG_DATA_HOME=$HOME/.local/share
 # remap caps to escape
 # setxkbmap -option caps:escape
 
+. "$HOME/.cargo/env"

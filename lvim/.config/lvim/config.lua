@@ -38,6 +38,12 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+lvim.builtin.bufferline.options.diagnostics = false
+
+if vim.fn.has("wsl") == 1 then
+	require("lv-wsl")
+end
+
 require("lv-plugins")
 require("lv-autocommands")
 require("lv-keymappings")
