@@ -5,11 +5,13 @@ lvim.builtin.which_key.mappings["x"] = {
 	name = "+Execute",
 	g = { "LazyGit" },
 	G = { "GNU Debugger" },
+	s = { "Serial USB1" },
 }
 
 lvim.builtin.terminal.execs = {
 	{ "lazygit", "<leader>xg", "LazyGit" },
 	{ "gdb", "<leader>xG", "GNU Debugger" },
+	{ "minicom -b 921600 -D /dev/ttyUSB1", "<leader>xs", "Serial" },
 }
 
 lvim.builtin.which_key.mappings["t"] = {
