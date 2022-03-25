@@ -24,6 +24,11 @@ lvim.builtin.which_key.mappings["t"] = {
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Diagnosticss" },
 }
+lvim.builtin.which_key.mappings["m"] = {
+	name = "+Minimap",
+	t = { "<cmd>MinimapToggle<cr>", "Toggle" },
+	r = { "<cmd>MinimapRefresh<cr>", "Refresh" },
+}
 
 lvim.keys.normal_mode["<esc>"] = "<cmd>nohlsearch<cr>"
 lvim.keys.normal_mode["Y"] = "y$"

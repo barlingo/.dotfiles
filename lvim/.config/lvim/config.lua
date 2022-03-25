@@ -27,7 +27,7 @@ lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.diagnostics.show_line_diagnostics = false
 
 -- Optional plugins LunarVim
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = false
 lvim.builtin.notify.active = true

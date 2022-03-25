@@ -36,7 +36,7 @@ lvim.plugins = {
 		"unblevable/quick-scope",
 		disable = false,
 		config = function()
-			require "config.quickscope"
+			require("config.quickscope")
 		end,
 	},
 	{
@@ -64,5 +64,13 @@ lvim.plugins = {
 			require("config.iron").setup()
 		end,
 		cmd = { "IronRepl", "IronSend", "IronReplHere" },
+	},
+	{
+		"wfxr/minimap.vim",
+		disable = false,
+		run = "cargo install --locked code-minimap",
+		config = function()
+			require("config.minimap").setup()
+		end,
 	},
 }
