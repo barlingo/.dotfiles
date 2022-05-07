@@ -67,7 +67,7 @@ lvim.plugins = {
 	},
 	{
 		"wfxr/minimap.vim",
-		disable = false,
+		disable = true,
 		run = "cargo install --locked code-minimap",
 		config = function()
 			require("config.minimap").setup()

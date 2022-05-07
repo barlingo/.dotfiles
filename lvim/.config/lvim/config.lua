@@ -14,11 +14,12 @@ vim.opt.foldlevel = 5
 -- require("lv-extra-fn").vim_plugins(false)
 
 -- Theme
--- lvim.colorscheme = "spacegray"
+lvim.colorscheme = "onedarker"
 lvim.transparent_window = false
 
 -- On save autocmd
-lvim.leader = " "
+lvim.leader = "space"
+-- lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
@@ -34,7 +35,7 @@ lvim.builtin.notify.active = true
 
 -- Builtin plugns settings
 lvim.builtin.nvimtree.show_icons.git = 1
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
