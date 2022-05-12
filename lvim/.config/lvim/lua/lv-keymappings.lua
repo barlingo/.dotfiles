@@ -6,11 +6,13 @@ lvim.builtin.which_key.mappings["x"] = {
 	g = { "LazyGit" },
 	G = { "GNU Debugger" },
 	s = { "Serial USB1" },
+	t = { "Terminal" },
 }
 
 lvim.builtin.terminal.execs = {
 	{ "lazygit", "<leader>xg", "LazyGit" },
 	{ "gdb", "<leader>xG", "GNU Debugger" },
+	{ "screen", "<leader>xt", "Terminal" },
 	{ "minicom -b 921600 -D /dev/ttyUSB1", "<leader>xs", "Serial" },
 }
 
@@ -24,11 +26,10 @@ lvim.builtin.which_key.mappings["t"] = {
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Diagnosticss" },
 }
-lvim.builtin.which_key.mappings["m"] = {
-	name = "+Minimap",
-	t = { "<cmd>MinimapToggle<cr>", "Toggle" },
-	r = { "<cmd>MinimapRefresh<cr>", "Refresh" },
-}
+-- lvim.builtin.which_key.mappings["m"] = {
+-- 	name = "+Markdown",
+-- 	t = { "<cmd>MarkdownPreview<cr>", "Toggle" },
+-- }
 
 lvim.keys.normal_mode["<esc>"] = "<cmd>nohlsearch<cr>"
 lvim.keys.normal_mode["Y"] = "y$"
