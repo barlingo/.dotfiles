@@ -1,4 +1,4 @@
 {
-  "rust-analyzer.lens.enable": true,
-  "rust-analyzer.lens.references": true
+  "rust-analyzer.lens.enable": false,
+  "rust-analyzer.lens.references": false    
 }
