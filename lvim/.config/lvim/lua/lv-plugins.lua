@@ -73,4 +73,13 @@ lvim.plugins = {
 			require("config.minimap").setup()
 		end,
 	},
+	{
+		"iamcco/markdown-preview.nvim",
+		disable = false,
+		run = "cd app && npm install",
+		ft = "markdown",
+		config = function()
+			require("config.markdown-preview").setup()
+		end,
+	},
 }
