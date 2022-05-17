@@ -1,8 +1,5 @@
 --  General Settings
 
--- Remove Vim plugins not used
--- require("lv-extra-fn").vim_plugins(false)
-
 -- Theme
 lvim.colorscheme = "onedarker"
 lvim.transparent_window = false
@@ -15,6 +12,7 @@ lvim.lint_on_save = true
 
 -- LSP Diagnostics
 lvim.lsp.diagnostics.show_line_diagnostics = false
+lvim.lsp.diagnostics.virtual_text = false
 
 -- Optional plugins LunarVim
 lvim.builtin.alpha.active = true
