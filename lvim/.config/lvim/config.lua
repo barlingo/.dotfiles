@@ -37,7 +37,7 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 -- Builtin plugns settings
 lvim.builtin.nvimtree.show_icons.git = 1
-lvim.builtin.treesitter.ensure_installed = "all"
+-- lvim.builtin.treesitter.ensure_installed = "all"
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
