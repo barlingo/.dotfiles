@@ -1,4 +1,5 @@
---  General Settings
+-- General settings
+require("lv-general")
 
 -- Theme
 lvim.colorscheme = "onedarker"
