@@ -20,7 +20,21 @@ lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = false
 lvim.builtin.notify.active = true
-
+lvim.builtin.treesitter.ensure_installed = {
+	"bash",
+	"c",
+	"cpp",
+	"javascript",
+	"json",
+	"lua",
+	"python",
+	"typescript",
+	-- "tsx",
+	"css",
+	"rust",
+	-- "java",
+	"yaml",
+}
 -- Builtin plugns settings
 lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.treesitter.ensure_installed = "all"
