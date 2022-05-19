@@ -1,3 +1,4 @@
+-- General nvim settings
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
@@ -41,3 +42,11 @@ vim.opt.spell = false
 vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
+
+-- General lvim settings
+lvim.colorscheme = "onedarker"
+lvim.transparent_window = false
+lvim.leader = "space"
+lvim.log.level = "warn"
+lvim.format_on_save = true
+lvim.lint_on_save = true
