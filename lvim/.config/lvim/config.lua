@@ -1,5 +1,5 @@
 -- General settings
-require("lv-general")
+require("user.settings")
 
 -- Theme
 lvim.colorscheme = "onedarker"
@@ -20,6 +20,8 @@ lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = false
 lvim.builtin.notify.active = true
+-- Builtin plugns settings
+lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.treesitter.ensure_installed = {
 	"bash",
 	"c",
@@ -35,18 +37,14 @@ lvim.builtin.treesitter.ensure_installed = {
 	-- "java",
 	"yaml",
 }
--- Builtin plugns settings
-lvim.builtin.nvimtree.show_icons.git = 1
--- lvim.builtin.treesitter.ensure_installed = "all"
--- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 lvim.builtin.bufferline.options.diagnostics = true
 
 if vim.fn.has("wsl") == 1 then
-	require("lv-wsl")
+	require("user.wsl")
 end
 
-require("lv-plugins")
+require("user.plugins")
 -- require("lv-autocommands")
-require("lv-keymappings")
+require("user.keymappings")
