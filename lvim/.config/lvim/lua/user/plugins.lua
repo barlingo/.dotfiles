@@ -14,7 +14,7 @@ lvim.plugins = {
   },
   {
     "lunarvim/colorschemes",
-    disable = true,
+    disable = false,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -56,10 +56,10 @@ lvim.plugins = {
   },
   {
     "ray-x/lsp_signature.nvim",
-    disable = true,
-    event = "InsertEnter",
+    disable = false,
+    event = "BufRead",
     config = function()
-      require("user.config.lsp_signature").on_attach()
+      require("lsp_signature").setup()
     end,
   },
   {
@@ -81,7 +81,7 @@ lvim.plugins = {
   },
   {
     "iamcco/markdown-preview.nvim",
-    disable = false,
+    disable = true,
     run = "cd app && npm install",
     ft = "markdown",
     config = function()

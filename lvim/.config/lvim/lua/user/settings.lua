@@ -45,7 +45,7 @@ vim.opt.sidescrolloff = 8
 
 -- General lvim settings
 lvim.colorscheme = "onedarker"
-lvim.transparent_window = false
+lvim.transparent_window = true
 lvim.leader = "space"
 lvim.log.level = "warn"
 lvim.format_on_save = true
