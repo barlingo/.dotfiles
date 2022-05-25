@@ -46,3 +46,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 setxkbmap -option caps:swapescape
 
 . "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
