@@ -9,7 +9,8 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
-
+export NVM_DIR="$HOME/.local/share/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # completions
 skip_global_compinit=1
 # autoload -Uz compinit

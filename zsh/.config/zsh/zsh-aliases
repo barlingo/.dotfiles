@@ -36,7 +36,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 # receive the key of a developer
 # alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"]'
+alias loadnvm=' -s "$NVM_DIR/nvm.sh"  && \. "$NVM_DIR/nvm.sh"'
 # For when keys break
 # alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
