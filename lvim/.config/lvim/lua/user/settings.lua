@@ -43,8 +43,12 @@ vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 
+-- Vim extra configs
 vim.opt.laststatus = 3
 vim.o.showcmd = false
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.cmd("let g:python3_host_prog = '~/.local/share/pyenv/versions/nvim/bin/python3'")
 
 -- General lvim settings
 lvim.colorscheme = "darkplus"
