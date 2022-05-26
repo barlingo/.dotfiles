@@ -46,8 +46,6 @@ vim.opt.sidescrolloff = 8
 -- Vim extra configs
 vim.opt.laststatus = 3
 vim.o.showcmd = false
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.cmd("let g:python3_host_prog = '~/.local/share/pyenv/versions/nvim/bin/python3'")
 
 -- General lvim settings
@@ -57,3 +55,9 @@ lvim.leader = "space"
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.lint_on_save = true
+-- Fix cmp issue with enter and tab
+local cmp = require("cmp")
+lvim.builtin.cmp.mapping["<CR>"] = cmp.mapping.confirm({
+  behavior = cmp.ConfirmBehavior.Replace,
+  select = true,
+})
