@@ -14,12 +14,16 @@ lvim.plugins = {
   },
   {
     "lunarvim/colorschemes",
+    disable = true,
+  },
+  {
+    "martinsione/darkplus.nvim",
     disable = false,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
     disable = false,
-    event = "BufRead",
+    event = "BufReadPost",
     config = function()
       require("user.config.blankline").setup()
     end,
@@ -27,13 +31,14 @@ lvim.plugins = {
   {
     "karb94/neoscroll.nvim",
     disable = false,
+    event = "BufReadPost",
     config = function()
       require("user.config.neoscroll").config()
     end,
   },
   {
     "norcalli/nvim-colorizer.lua",
-    disable = false,
+    disable = true,
     config = function()
       require("user.config.colorizer").setup()
     end,
@@ -48,6 +53,7 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     disable = false,
+    event = "BufReadPost",
     requires = "kyazdani42/nvim-web-devicons",
     cmd = { "Trouble", "TroubleToggle" },
     config = function()
@@ -57,7 +63,7 @@ lvim.plugins = {
   {
     "ray-x/lsp_signature.nvim",
     disable = false,
-    event = "BufRead",
+    event = "BufReadPost",
     config = function()
       require("lsp_signature").setup()
     end,

@@ -46,7 +46,7 @@ M.setup = function()
     "operation_type",
   }
   -- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
-  -- vim.wo.colorcolumn = "99999"
+  vim.wo.colorcolumn = "99999"
   vim.cmd("hi IndentBlanklineChar guifg=#404040")
   vim.cmd("hi IndentBlanklineContextChar guifg=#808080")
 end

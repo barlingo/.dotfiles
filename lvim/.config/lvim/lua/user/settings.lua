@@ -47,7 +47,7 @@ vim.opt.laststatus = 3
 vim.o.showcmd = false
 
 -- General lvim settings
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "darkplus"
 lvim.transparent_window = true
 lvim.leader = "space"
 lvim.log.level = "warn"
