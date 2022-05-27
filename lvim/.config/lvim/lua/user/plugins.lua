@@ -17,6 +17,14 @@ lvim.plugins = {
     disable = true,
   },
   {
+    "eddyekofo94/gruvbox-flat.nvim",
+    disable = false,
+    -- need to config after setting-up the theme
+    -- config = function()
+    --   require("user.config.gruvbox").setup()
+    -- end,
+  },
+  {
     "martinsione/darkplus.nvim",
     disable = false,
   },
