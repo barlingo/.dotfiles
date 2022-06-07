@@ -12,6 +12,7 @@ export GOPATH=$HOME/.local/share/go
 export PYENV_ROOT="$HOME/.config/pyenv/"
 export __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv/
 export GNUPGHOME=$HOME/.config/gnupg/
+export NODE_REPL_HISTORY="$HOME/.cache/node/node_repl_history"
 eval "$(fnm env)"
 # eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"

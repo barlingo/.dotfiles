@@ -21,14 +21,16 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # easier to read disk
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
 
 # get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4 | head -5'
 
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+
+alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 
 # gpg encryption
 # verify signature for isos
@@ -50,19 +52,19 @@ alias s="git checkout stable"
 
 case "$(uname -s)" in
 
-   Darwin)
-     # echo 'Mac OS X'
+Darwin)
+	# echo 'Mac OS X'
 	alias ls='ls -G'
-     ;;
+	;;
 
-   Linux)
+Linux)
 	alias ls='ls --color=auto'
-     ;;
+	;;
 
-   CYGWIN*|MINGW32*|MSYS*|MINGW*)
-     # echo 'MS Windows'
-     ;;
-   *)
-     # echo 'Other OS' 
-     ;;
+CYGWIN* | MINGW32* | MSYS* | MINGW*)
+	# echo 'MS Windows'
+	;;
+*)
+	# echo 'Other OS'
+	;;
 esac
