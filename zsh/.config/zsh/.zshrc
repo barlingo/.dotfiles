@@ -1,11 +1,6 @@
 #!/bin/sh
 
-export RUSTUP_HOME=$HOME/.local/share/rustup
-export NVM_DIR="$HOME/.local/share/nvm"
 source $HOME/.local/share/cargo/env
-# nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.local/share/nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
@@ -86,9 +81,10 @@ autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
 # Py ENV
-export PYENV_ROOT="$HOME/.local/share/pyenv"
+export PATH="$HOME/.local/share/pyenv/bin:$PATH"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+export __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv/
+# eval "$(pyenv init --path)"
+# eval "$(pyenv virtualenv-init -)"
 
