@@ -49,8 +49,8 @@ vim.o.showcmd = false
 vim.cmd("let g:python3_host_prog = '~/.local/share/pyenv/versions/nvim/bin/python3'")
 
 -- General lvim settings
-lvim.colorscheme = "gruvbox-flat"
-require("user.config.gruvbox")
+lvim.colorscheme = "darkplus"
+-- require("user.config.gruvbox")
 
 lvim.transparent_window = true
 lvim.leader = "space"
