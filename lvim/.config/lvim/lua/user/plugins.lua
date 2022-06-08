@@ -6,6 +6,10 @@ lvim.plugins = {
     opt = false,
   },
   {
+    "navarasu/onedark.nvim",
+    disable = false,
+  },
+  {
     "tzachar/cmp-tabnine",
     disable = true,
     run = "./install.sh",
@@ -15,18 +19,6 @@ lvim.plugins = {
   {
     "lunarvim/colorschemes",
     disable = true,
-  },
-  {
-    "eddyekofo94/gruvbox-flat.nvim",
-    disable = false,
-    -- need to config after setting-up the theme
-    -- config = function()
-    --   require("user.config.gruvbox").setup()
-    -- end,
-  },
-  {
-    "martinsione/darkplus.nvim",
-    disable = false,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -46,7 +38,7 @@ lvim.plugins = {
   },
   {
     "norcalli/nvim-colorizer.lua",
-    disable = true,
+    disable = false,
     config = function()
       require("user.config.colorizer").setup()
     end,

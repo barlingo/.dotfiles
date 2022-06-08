@@ -1,8 +1,10 @@
+require("user.config.onedark")
+lvim.colorscheme = "onedark"
+lvim.transparent_window = true
 -- General nvim settings
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
-vim.opt.colorcolumn = "80" -- fixes indentline for now
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
@@ -49,10 +51,6 @@ vim.o.showcmd = false
 vim.cmd("let g:python3_host_prog = '~/.local/share/pyenv/versions/nvim/bin/python3'")
 
 -- General lvim settings
-lvim.colorscheme = "darkplus"
--- require("user.config.gruvbox")
-
-lvim.transparent_window = true
 lvim.leader = "space"
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -63,3 +61,4 @@ lvim.builtin.cmp.mapping["<CR>"] = cmp.mapping.confirm({
   behavior = cmp.ConfirmBehavior.Replace,
   select = true,
 })
+vim.opt.colorcolumn = "80" -- fixes indentline for now
