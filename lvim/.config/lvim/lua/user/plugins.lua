@@ -38,7 +38,7 @@ lvim.plugins = {
   },
   {
     "norcalli/nvim-colorizer.lua",
-    disable = false,
+    disable = true,
     config = function()
       require("user.config.colorizer").setup()
     end,
