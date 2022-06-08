@@ -42,3 +42,11 @@ require("onedark").setup({
 	},
 })
 lvim.builtin.alpha.dashboard.section.header.opts.hl = "TSMethod"
+local custom_onedark = require("lualine.themes.onedark")
+custom_onedark.normal.b = { fg = custom_onedark.normal.a.bg, gui = "none", bg = custom_onedark.normal.a.fg }
+custom_onedark.insert.b = { fg = custom_onedark.insert.a.bg, gui = "none" }
+custom_onedark.visual.b = { fg = custom_onedark.visual.a.bg, gui = "none", bg = custom_onedark.normal.a.fg }
+custom_onedark.replace.b = { fg = custom_onedark.replace.a.bg, gui = "none" }
+custom_onedark.command.b = { fg = custom_onedark.command.a.bg, gui = "none", bg = custom_onedark.normal.a.fg }
+
+lvim.builtin.lualine.options.theme = custom_onedark
