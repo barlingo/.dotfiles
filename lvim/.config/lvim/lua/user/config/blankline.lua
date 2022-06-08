@@ -13,6 +13,7 @@ M.setup = function()
     "neogitstatus",
     "NvimTree",
     "Trouble",
+    "alpha",
   }
   vim.opt.list = true
   -- vim.opt.listchars:append("space:⋅")
@@ -23,15 +24,13 @@ M.setup = function()
     show_current_context = true,
     show_current_context_start = true,
   })
-  -- vim.g.indent_blankline_char = "│"
   vim.g.indent_blankline_char = "▏"
-  vim.g.indent_blankline_show_trailing_blankline_indent = false
+  vim.g.indent_blankline_context_char = "▏"
+  vim.g.indent_blankline_show_trailing_blankline_indent = true
   -- vim.g.indentLine_leadingSpaceEnabled = true
   -- vim.g.indentLine_leadingSpaceChar = "·"
   vim.g.indent_blankline_show_first_indent_level = true
   vim.g.indent_blankline_use_treesitter = true
-  vim.g.indent_blankline_show_current_context = true
-  vim.g.indent_blankline_show_current_context_start = true
   vim.g.indent_blankline_context_patterns = {
     "class",
     "return",
@@ -57,7 +56,7 @@ M.setup = function()
   -- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
   vim.wo.colorcolumn = "99999"
   vim.cmd("hi IndentBlanklineChar guifg=#404040")
-  vim.cmd("hi IndentBlanklineContextChar guifg=#808080")
+  vim.cmd("hi IndentBlanklineContextChar guifg=#626262")
 end
 
 return M
