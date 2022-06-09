@@ -3,7 +3,7 @@ local M = {}
 M.setup = function()
 	-- " set to 1, nvim will open the preview window after entering the markdown buffer
 	-- " default: 0
-	vim.g.mkdp_auto_start = 1
+	vim.g.mkdp_auto_start = 0
 
 	-- " set to 1, the nvim will auto close current preview window when change
 	-- " from markdown buffer to another buffer
@@ -14,7 +14,7 @@ M.setup = function()
 	-- " leave from insert mode, default 0 is auto refresh markdown as you edit or
 	-- " move the cursor
 	-- " default: 0
-	vim.g.mkdp_refresh_slow = 0
+	vim.g.mkdp_refresh_slow = 1
 
 	-- " set to 1, the MarkdownPreview command can be use for all files,
 	-- " by default it can be use in markdown file

@@ -87,11 +87,16 @@ lvim.plugins = {
   },
   {
     "iamcco/markdown-preview.nvim",
-    disable = true,
+    disable = false,
     run = "cd app && npm install",
     ft = "markdown",
     config = function()
       require("user.config.markdown-preview").setup()
     end,
+  },
+  {
+    "ixru/nvim-markdown",
+    ft = "markdown",
+    disable = false,
   },
 }
