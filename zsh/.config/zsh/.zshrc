@@ -87,4 +87,4 @@ eval "$(pyenv init -)"
 export __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv/
 # eval "$(pyenv init --path)"
 # eval "$(pyenv virtualenv-init -)"
-
+eval "$(starship init zsh)"
