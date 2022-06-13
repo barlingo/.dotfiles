@@ -3,16 +3,17 @@ HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
 export RUSTUP_HOME=$HOME/.local/share/rustup
+export CARGO_HOME=$HOME/.local/share/cargo/
 export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
-export PATH=$HOME/.local/share/cargo/bin:$PATH
-export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PYENV_ROOT="$HOME/.config/pyenv/"
 export __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv/
 export GNUPGHOME=$HOME/.config/gnupg/
 export NODE_REPL_HISTORY="$HOME/.cache/node/node_repl_history"
+export PATH=$HOME/.local/share/cargo/bin:$PATH
+export PATH=$HOME/.local/share/go/bin:$PATH
 eval "$(fnm env)"
 # eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
