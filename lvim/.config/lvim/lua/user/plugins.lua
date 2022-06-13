@@ -1,6 +1,10 @@
 -- Additional Plugins
 lvim.plugins = {
   {
+    "p00f/nvim-ts-rainbow",
+    disable = false,
+  },
+  {
     "arkav/lualine-lsp-progress",
     disable = true,
     opt = false,
