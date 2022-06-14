@@ -33,6 +33,9 @@ require("onedark").setup({
     TSOperator = { fg = "#61afef" },
     TSComment = { fg = "#909090" },
     DiagnosticHint = { fg = "#61afef" },
+    TSPunctDelimiter = { fg = "#bbbbbb" },
+    TSPunctBracket = { fg = "#bbbbbb" },
+    rainbowcol1 = { fg = "#bbbbbb" },
   },
   -- Plugins Config --
   diagnostics = {
