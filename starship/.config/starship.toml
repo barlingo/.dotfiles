@@ -31,9 +31,10 @@ behind = " $count "
 deleted = " $count "
 untracked = " "
 staged = " $count "
-stashed =""
+stashed ="S "
 modified = " ${count} "
-format = '([$all_status(purple)$ahead_behind](purple) )'
+
+format = '([$all_status(purple)$ahead_behind](white) )'
 up_to_date = ""
 
 
