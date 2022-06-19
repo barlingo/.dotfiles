@@ -31,11 +31,10 @@ behind = " $count "
 deleted = " $count "
 untracked = " "
 staged = " $count "
-stashed ="S "
+stashed ="硫"
 modified = " ${count} "
-
 format = '([$all_status(purple)$ahead_behind](white) )'
-up_to_date = ""
+up_to_date = " "
 
 
 # Last param in the first line/row
