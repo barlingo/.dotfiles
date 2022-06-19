@@ -14,6 +14,8 @@ export GNUPGHOME=$HOME/.config/gnupg/
 export NODE_REPL_HISTORY="$HOME/.cache/node/node_repl_history"
 export PATH=$HOME/.local/share/cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(fnm env)"
+
 # eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
