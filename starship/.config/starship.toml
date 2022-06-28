@@ -29,11 +29,11 @@ ahead = " $count "
 diverged = " $ahead_count  $behind_count "
 behind = " $count "
 deleted = " $count "
-untracked = " "
+untracked = " $count "
 staged = " $count "
 stashed ="硫"
 modified = " ${count} "
-format = '([$all_status(purple)$ahead_behind](white) )'
+format = '([$all_status(purple)$ahead_behind](white))'
 up_to_date = " "
 
 
